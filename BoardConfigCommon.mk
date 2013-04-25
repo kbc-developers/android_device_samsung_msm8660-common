@@ -78,9 +78,3 @@ TARGET_PROVIDES_LIBLIGHT := true
 # Samsung VoIP/call routing
 BOARD_HAVE_SAMSUNG_AUDIO := true
 COMMON_GLOBAL_CFLAGS += -DQCOM_VOIP_ENABLED -DQCOM_ACDB_ENABLED
-
-# Disable PIE since it breaks ICS camera blobs
-TARGET_DISABLE_ARM_PIE := true
-
-# use toolchain 4.4.3 for kernel compile
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.4.3/bin/arm-eabi-
