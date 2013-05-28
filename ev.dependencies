@@ -10,6 +10,6 @@
     "target_path": "kernel/samsung/msm8660",
     "branch": "jellybean",
     "dep_type": "kernel"
-  },
+  }
 ]
 
