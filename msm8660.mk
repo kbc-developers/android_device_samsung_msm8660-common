@@ -44,12 +44,17 @@ PRODUCT_PACKAGES += \
     gps.msm8660 \
     power.msm8660
 
+# Audio config
+PRODUCT_COPY_FILES += \
+    device/samsung/msm8660-common/configs/audio_policy.conf:system/etc/audio_policy.conf
+
 # Audio
 PRODUCT_PACKAGES += \
     audio_policy.conf \
     audio.a2dp.default \
     audio_policy.msm8660 \
     audio.primary.msm8660 \
+    libaudio-resampler \
     libaudioutils
 
 # GalaxyS2Settings
@@ -130,6 +135,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/recovery/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh \
 	$(LOCAL_PATH)/recovery/postrecoveryboot.sh:recovery/system/bin/postrecoveryboot.sh
+
+# Support for testing the baseband version
+PRODUCT_COPY_FILES += \
+	device/samsung/msm8660-common/test_radio_version.sh:/system/etc/test_radio_version.sh
 
 # We have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
