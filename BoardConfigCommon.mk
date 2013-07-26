@@ -85,5 +85,8 @@ BOARD_USES_LEGACY_ALSA_AUDIO := true
 BOARD_HAVE_SAMSUNG_AUDIO := true
 COMMON_GLOBAL_CFLAGS += -DQCOM_ACDB_ENABLED
 
+# To handle radio version checks
 TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/msm8660-common
 
+# Use older ION API for qcom/media
+TARGET_HAS_OLD_QCOM_ION := true
