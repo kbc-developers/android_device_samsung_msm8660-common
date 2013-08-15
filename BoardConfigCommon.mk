@@ -81,10 +81,6 @@ COMMON_GLOBAL_CFLAGS += -DQCOM_ACDB_ENABLED
 # To handle radio version checks
 TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/msm8660-common
 
-<<<<<<< HEAD
-# Use older ION API for qcom/media
-TARGET_HAS_OLD_QCOM_ION := true
-=======
 # Use legacy MM heap behavior
 TARGET_DISPLAY_INSECURE_MM_HEAP := true
 
@@ -123,5 +119,3 @@ BOARD_SEPOLICY_UNION += \
     thermald.te \
     ueventd.te \
     wpa_supplicant.te
-
->>>>>>> cm/cm-10.2
