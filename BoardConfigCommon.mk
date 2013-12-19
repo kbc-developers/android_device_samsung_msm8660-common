@@ -18,7 +18,7 @@ TARGET_SPECIFIC_HEADER_PATH := device/samsung/msm8660-common/include
 TARGET_BOARD_PLATFORM := msm8660
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 TARGET_ARCH_VARIANT := cortex-a8
-TARGET_CPU_VARIANT := scorpion
+TARGET_CPU_VARIANT := cortex-a8
 TARGET_CPU_SMP := true
 
 # inherit from qcom-common
@@ -66,7 +66,7 @@ BOARD_VOLD_MAX_PARTITIONS := 28
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
 # Camera
-COMMON_GLOBAL_CFLAGS += -DSAMSUNG_CAMERA_HARDWARE -DQCOM_BSP_CAMERA_ABI_HACK
+COMMON_GLOBAL_CFLAGS += -DSAMSUNG_CAMERA_HARDWARE -DQCOM_BSP_CAMERA_ABI_HACK -DNEEDS_VECTORIMPL_SYMBOLS
 BOARD_CAMERA_USE_MM_HEAP := true
 
 # Workaround to avoid issues with legacy liblights on QCOM platforms
@@ -75,6 +75,7 @@ TARGET_PROVIDES_LIBLIGHT := true
 # Audio
 BOARD_HAVE_SAMSUNG_AUDIO := true
 BOARD_QCOM_VOIP_ENABLED := true
+BOARD_QCOM_TUNNEL_LPA_ENABLED := true
 
 # QCOM enhanced A/V
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
@@ -93,30 +94,27 @@ BOARD_SEPOLICY_DIRS += \
     device/samsung/msm8660-common/sepolicy
 
 BOARD_SEPOLICY_UNION += \
-    file_contexts \
-    property_contexts \
-    te_macros \
-    bridge.te \
-    camera.te \
-    conn_init.te \
+    app.te \
+    bluetooth.te \
     device.te \
-    dhcp.te \
     domain.te \
     drmserver.te \
+    file_contexts \
+    files \
     file.te \
-    kickstart.te \
+    hci_init.te \
+    healthd.te \
     init.te \
+    init_shell.te \
+    keystore.te \
+    kickstart.te \
     mediaserver.te \
-    mpdecision.te \
-    netmgrd.te \
-    property.te \
-    qmux.te \
     rild.te \
-    rmt.te \
-    sensors.te \
     surfaceflinger.te \
     system.te \
-    tee.te \
-    thermald.te \
     ueventd.te \
-    wpa_supplicant.te
+    untrusted_app.te \
+    vold.te \
+    wpa.te \
+    wpa_socket.te
+
