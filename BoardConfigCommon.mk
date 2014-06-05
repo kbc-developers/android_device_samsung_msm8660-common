@@ -95,9 +95,6 @@ TARGET_DISPLAY_INSECURE_MM_HEAP := true
 # Use retire fence from MDP driver
 TARGET_DISPLAY_USE_RETIRE_FENCE := true
 
-# Recovery
-BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/msm8660-common/recovery/graphics.c
-
 # SELinux
 BOARD_SEPOLICY_DIRS += \
     device/samsung/msm8660-common/sepolicy
