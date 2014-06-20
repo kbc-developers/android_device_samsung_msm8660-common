@@ -48,8 +48,13 @@ TARGET_USES_QCOM_BSP := true
 COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE -DQCOM_BSP
 
 # Recovery
+#TWRP := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+ifneq ($(TWRP),true)
 TARGET_RECOVERY_FSTAB := device/samsung/msm8660-common/rootdir/etc/fstab.qcom
+else
+TARGET_RECOVERY_FSTAB := device/samsung/msm8660-common/rootdir/etc/twrp.fstab
+endif
 RECOVERY_FSTAB_VERSION := 2
 
 # Adreno configuration
@@ -99,7 +104,9 @@ TARGET_DISPLAY_USE_RETIRE_FENCE := true
 TARGET_USES_CM_POWERHAL := true
 
 # Recovery
+ifneq ($(TWRP),true)
 BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/msm8660-common/recovery/graphics.c
+endif
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
