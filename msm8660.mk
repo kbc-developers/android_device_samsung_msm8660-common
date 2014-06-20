@@ -45,6 +45,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
 
+# TWRP
+PRODUCT_COPY_FILES += \
+    device/samsung/msm8660-common/rootdir/etc/twrp.fstab:recovery/root/etc/twrp.fstab
+
 # HALs
 PRODUCT_PACKAGES += \
     camera.msm8660 \
