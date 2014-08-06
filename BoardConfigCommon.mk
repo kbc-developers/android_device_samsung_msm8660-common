@@ -21,12 +21,6 @@ TARGET_SPECIFIC_HEADER_PATH := device/samsung/msm8660-common/include
 TARGET_BOARD_PLATFORM := msm8660
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 
-# Recovery
-#TWRP := true
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-TARGET_RECOVERY_FSTAB := device/samsung/msm8660-common/rootdir/etc/fstab.qcom
-RECOVERY_FSTAB_VERSION := 2
-
 # Architecture
 TARGET_CPU_VARIANT := scorpion
 
@@ -80,6 +74,7 @@ COMMON_GLOBAL_CFLAGS += -DQCOM_BSP
 TARGET_USES_QCOM_BSP := true
 
 # Recovery
+#TWRP := true
 ifneq ($(TWRP),true)
 BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/msm8660-common/recovery/graphics.c
 endif
