@@ -69,6 +69,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=SamsungMSM8660RIL
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vold.umsdirtyratio=50
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
