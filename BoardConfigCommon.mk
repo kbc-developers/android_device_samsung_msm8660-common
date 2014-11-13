@@ -47,6 +47,7 @@ BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charg
 
 # Display
 BOARD_EGL_CFG := device/samsung/msm8660-common/configs/egl.cfg
+BOARD_USES_LEGACY_MMAP := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_DISPLAY_INSECURE_MM_HEAP := true
