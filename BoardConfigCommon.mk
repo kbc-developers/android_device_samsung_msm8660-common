@@ -15,8 +15,6 @@
 # inherit from qcom-common
 -include device/samsung/qcom-common/BoardConfigCommon.mk
 
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/msm8660-common/include
-
 # Platform
 TARGET_BOARD_PLATFORM := msm8660
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
@@ -58,6 +56,9 @@ TARGET_QCOM_DISPLAY_VARIANT := caf
 
 # GPS
 BOARD_HAVE_NEW_QC_GPS := true
+
+# Includes
+TARGET_SPECIFIC_HEADER_PATH += device/samsung/msm8660-common/include
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
