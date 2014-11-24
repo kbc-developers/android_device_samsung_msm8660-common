@@ -56,6 +56,7 @@ TARGET_QCOM_DISPLAY_VARIANT := caf
 
 # GPS
 BOARD_HAVE_NEW_QC_GPS := true
+TARGET_NO_RPC := true
 
 # Includes
 TARGET_SPECIFIC_HEADER_PATH += device/samsung/msm8660-common/include
