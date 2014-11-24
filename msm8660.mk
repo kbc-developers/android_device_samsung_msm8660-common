@@ -177,7 +177,7 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    libnetcmdiface
+    libnetcmdiface \
     macloader \
     dhcpcd.conf \
     hostapd \

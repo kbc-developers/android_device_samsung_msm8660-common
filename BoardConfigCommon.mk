@@ -83,7 +83,7 @@ TARGET_RECOVERY_FSTAB := device/samsung/msm8660-common/rootdir/etc/fstab.qcom
 TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/msm8660-common
 
 # RIL
-BOARD_RIL_CLASS := ../../../device/samsung/msm8660-common/ril
+# BOARD_RIL_CLASS := ../../../device/samsung/msm8660-common/ril
 
 # Wifi related defines
 BOARD_HAVE_SAMSUNG_WIFI := true
