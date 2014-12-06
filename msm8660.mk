@@ -171,6 +171,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Torch
 
+# TWRP
+PRODUCT_PACKAGES += \
+    twrp.fstab
+
 # USB
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
