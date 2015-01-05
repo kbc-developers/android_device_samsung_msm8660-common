@@ -74,9 +74,6 @@ TARGET_POWERHAL_VARIANT := cm
 # Recovery
 TARGET_RECOVERY_FSTAB := device/samsung/msm8660-common/rootdir/etc/fstab.qcom
 
-# Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/msm8660-common
-
 # RIL
 BOARD_RIL_CLASS := ../../../device/samsung/msm8660-common/ril
 
