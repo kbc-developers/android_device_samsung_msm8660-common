@@ -70,7 +70,6 @@ TARGET_POWERHAL_VARIANT := cm
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/samsung/msm8660-common/rootdir/etc/fstab.qcom
-BLOCK_BASED_OTA := false
 
 # RIL
 BOARD_RIL_CLASS := ../../../device/samsung/msm8660-common/ril
