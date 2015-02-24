@@ -46,7 +46,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=/system/lib/libqc-opt.so
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.composition.type=dyn \
     debug.mdpcomp.maxlayer=3 \
     debug.hwc.dynThreshold=1.9 \
     ro.opengles.version=131072
