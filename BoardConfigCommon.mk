@@ -19,7 +19,7 @@
 TARGET_KERNEL_SOURCE        := kernel/samsung/msm8660
 
 # common kernel source
-TARGET_KERNEL_SOURCE        := kernel/samsung/msm8660
+TARGET_KERNEL_SOURCE        := kernel/samsung/msm8660-dcm
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8660
