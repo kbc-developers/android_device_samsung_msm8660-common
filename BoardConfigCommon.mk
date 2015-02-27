@@ -77,15 +77,10 @@ TARGET_PROVIDES_LIBLIGHT := true
 TARGET_USES_LOGD := false
 
 # Media
-TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 TARGET_NO_ADAPTIVE_PLAYBACK := true
 
 # Power
 TARGET_USES_CM_POWERHAL := true
-
-# Qualcomm support
-COMMON_GLOBAL_CFLAGS += -DQCOM_BSP
-TARGET_USES_QCOM_BSP := true
 
 # Recovery
 #BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/msm8660-common/recovery/graphics.c
