@@ -106,7 +106,6 @@ BOARD_SEPOLICY_UNION += \
     init.te \
     init_shell.te \
     mediaserver.te \
-    mpdecision.te \
     rild.te \
     surfaceflinger.te \
     system_app.te \
