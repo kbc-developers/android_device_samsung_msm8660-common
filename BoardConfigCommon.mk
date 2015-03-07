@@ -50,7 +50,7 @@ BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charg
 LOCAL_CFLAGS += -DCHARGER_SHOW_PERCENTAGE
 
 # CMHW
-BOARD_HARDWARE_CLASS += device/samsung/msm8960-common/cmhw
+BOARD_HARDWARE_CLASS += device/samsung/msm8660-common/cmhw
 
 # Display
 BOARD_EGL_CFG := device/samsung/msm8660-common/configs/egl.cfg
