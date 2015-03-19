@@ -394,14 +394,6 @@ service quipc_main /system/bin/quipc_main
     group net_admin wifi inet gps
     disabled
 
-on property:crypto.driver.load=1
-     insmod /system/lib/modules/qce.ko
-     insmod /system/lib/modules/qcedev.ko
-
-on property:crypto.driver.load=0
-     exec /system/bin/rmmod qcedev.ko
-     exec /system/bin/rmmod qce.ko
-
 service drmdiag /system/bin/drmdiagapp
     class late_start
      user root
