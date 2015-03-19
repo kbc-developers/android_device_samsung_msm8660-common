@@ -15,8 +15,6 @@
 # inherit from qcom-common
 -include device/samsung/qcom-common/BoardConfigCommon.mk
 
-# common kernel source
-TARGET_KERNEL_SOURCE        := kernel/samsung/msm8660
 
 # common kernel source
 TARGET_KERNEL_SOURCE        := kernel/samsung/msm8660-dcm
