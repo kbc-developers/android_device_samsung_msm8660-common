@@ -393,13 +393,6 @@ service quipc_main /system/bin/quipc_main
     group net_admin wifi inet gps
     disabled
 
-service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
-    class late_start
-    user root
-    group system qcom_oncrpc
-    disabled
-    oneshot
-
 service drmdiag /system/bin/drmdiagapp
     class late_start
      user root
@@ -441,6 +434,7 @@ on charger
 service charger /charger
     class charger
     critical
+    seclabel u:r:healthd:s0
 
 on property:sys.boot_completed=1
     write /sys/module/rpm_resources/enable_low_power/L2_cache 1
@@ -520,8 +514,3 @@ service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard1
 service fuse_usbdisk /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usbdisk /storage/usbdisk
     class late_start
     disabled
-
-service charger /charger
-    class charger
-    critical
-    seclabel u:r:healthd:s0
