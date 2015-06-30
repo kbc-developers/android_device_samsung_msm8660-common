@@ -80,6 +80,10 @@ PRODUCT_PACKAGES += \
     lpm.rc \
     ueventd.qcom.rc
 
+# ART
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat-flags=--no-watch-dog
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
