@@ -129,13 +129,13 @@ static int rgb_to_brightness(struct light_state_t const *state)
         + (150*((color>>8) & 0x00ff)) + (29*(color & 0x00ff))) >> 8;
 }
 
-static int set_light_battery(struct light_device_t* dev,
+static int set_light_battery(__attribute__((unused))struct light_device_t* dev,
             struct light_state_t const* state)
 {
     return 0;
 }
 
-static int set_light_notifications(struct light_device_t* dev,
+static int set_light_notifications(__attribute__((unused))struct light_device_t* dev,
             struct light_state_t const* state)
 {
        int bln_led_control = state->color & 0x00ffffff ? 1 : 0;
@@ -161,7 +161,7 @@ static int set_light_notifications(struct light_device_t* dev,
        return res;
 }
 
-static int set_light_backlight(struct light_device_t *dev,
+static int set_light_backlight(__attribute__((unused))struct light_device_t *dev,
             struct light_state_t const *state)
 {
         load_settings();
@@ -175,13 +175,13 @@ static int set_light_backlight(struct light_device_t *dev,
     return err;
 }
 
-static int set_light_keyboard(struct light_device_t *dev,
+static int set_light_keyboard(__attribute__((unused))struct light_device_t *dev,
             struct light_state_t const *state)
 {
     return 0;
 }
 
-static int set_light_buttons(struct light_device_t *dev,
+static int set_light_buttons(__attribute__((unused))struct light_device_t *dev,
             struct light_state_t const *state)
 {
     int touch_led_control = state->color & 0x00ffffff ? 1 : 2;
