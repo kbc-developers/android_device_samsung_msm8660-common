@@ -67,8 +67,9 @@ TARGET_SPECIFIC_HEADER_PATH += device/samsung/msm8660-common/include
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
-# Logging
-TARGET_USES_LOGD := false
+# Media
+TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
+TARGET_QCOM_MEDIA_VARIANT := caf
 
 # Power
 TARGET_POWERHAL_VARIANT := cm
