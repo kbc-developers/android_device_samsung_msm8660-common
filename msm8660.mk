@@ -77,7 +77,6 @@ PRODUCT_PACKAGES += \
     init.qcom.modem_links.sh \
     init.qcom.rc \
     init.qcom.syspart_fixup.sh \
-    lpm.rc \
     ueventd.qcom.rc
 
 # ART
@@ -88,11 +87,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.usb.default \
-    audio_policy.conf \
-    audio_policy.msm8660 \
     audio.primary.msm8660 \
     libaudio-resampler \
     libaudioutils
+
+# Audio policy configuration
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -173,6 +174,10 @@ PRODUCT_PACKAGES += \
 # QRNGD
 PRODUCT_PACKAGES += \
     qrngd
+
+# Thermal configuration
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/thermald.conf:system/etc/thermald.conf
 
 # Torch
 PRODUCT_PACKAGES += \
