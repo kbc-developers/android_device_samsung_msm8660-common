@@ -75,7 +75,7 @@ TARGET_QCOM_MEDIA_VARIANT := caf
 TARGET_POWERHAL_VARIANT := cm
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/samsung/msm8660-common/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/samsung/msm8660-common/rootdir/etc/twrp.fstab
 
 # RIL
 BOARD_RIL_CLASS := ../../../device/samsung/msm8660-common/ril
