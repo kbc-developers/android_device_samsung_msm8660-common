@@ -126,6 +126,11 @@ static char *camera_fixup_getparams(int id, const char *settings)
     /* Preview: Set fixed frame rate */
     params.set("preview-frame-rate-mode", "frame-rate-fixed");
 
+    /* Camera: Disable ZSL */
+    params.set(CameraParameters::KEY_ZSL, "off");
+    params.set(CameraParameters::KEY_SAMSUNG_CAMERA_MODE, "0");
+    params.set(CameraParameters::KEY_CAMERA_MODE, "0");
+
     ALOGV("%s: Fixed parameters:", __FUNCTION__);
     params.dump();
 
