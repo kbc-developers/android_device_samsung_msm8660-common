@@ -74,3 +74,9 @@
 /sys/class/misc/enhanced_bln/blink_timeout_ms             u:object_r:keypad_dev:s0
 /sys/module/board_msm8x60_celox/parameters/panel_uv       u:object_r:panel_dev:s0
 /sys/module/sec_m5mo/parameters/force_lp_flash            u:object_r:power_dev:s0
+
+# Radio
+/data/data/com.android.providers.telephony/databases(/.*)?          u:object_r:radio_data_file:s0
+/data/data/com.android.providers.telephony/shared_prefs(/.*)?       u:object_r:radio_data_file:s0
+/data/user_de/0/com.android.providers.telephony/databases(/.*)?     u:object_r:radio_data_file:s0
+/data/user_de/0/com.android.providers.telephony/shared_prefs(/.*)?  u:object_r:radio_data_file:s0

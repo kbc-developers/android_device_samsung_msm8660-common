@@ -610,3 +610,9 @@ on property:sys.boot_completed=1
    mkdir /data/data/com.android.providers.telephony/shared_prefs 0700 radio radio
    symlink /data/user_de/0/com.android.providers.telephony/databases/telephony.db /data/data/com.android.providers.telephony/databases/telephony.db
    symlink /data/user_de/0/com.android.providers.telephony/shared_prefs/preferred-apn.xml /data/data/com.android.providers.telephony/shared_prefs/preferred-apn.xml
+
+   # Restore contexts
+   restorecon /data/data/com.android.providers.telephony/databases
+   restorecon /data/data/com.android.providers.telephony/shared_prefs
+   restorecon /data/user_de/0/com.android.providers.telephony/databases
+   restorecon /data/user_de/0/com.android.providers.telephony/shared_prefs
