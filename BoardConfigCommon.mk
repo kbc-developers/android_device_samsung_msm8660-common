@@ -91,7 +91,7 @@ RECOVERY_GRAPHICS_USE_LINELENGTH := true
 RECOVERY_SDCARD_ON_DATA := true
 
 # Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/msm8660-common/releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/msm8660-common
 
 # RIL
 BOARD_RIL_CLASS := ../../../device/samsung/msm8660-common/ril
