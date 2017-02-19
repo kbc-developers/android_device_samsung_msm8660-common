@@ -223,10 +223,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.msm8660
 
-# Releasetools
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/releasetools/partitioncheck.sh:install/bin/partitioncheck.sh
-
 # Sensors
 PRODUCT_PACKAGES += \
     sensors.MSM8660_SURF

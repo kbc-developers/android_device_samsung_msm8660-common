@@ -96,7 +96,7 @@ TARGET_RECOVERY_FSTAB := device/samsung/msm8660-common/rootdir/etc/fstab.qcom
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/msm8660-common/releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/msm8660-common
 
 # RIL
 BOARD_RIL_CLASS := ../../../device/samsung/msm8660-common/ril
