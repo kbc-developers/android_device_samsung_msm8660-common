@@ -112,14 +112,14 @@ __BEGIN_DECLS
 #define RESOLUTION_A                (RANGE_A/(512*NUMOFACCDATA))
 #define CONVERT_A                   (GRAVITY_EARTH / LSB / NUMOFACCDATA)
 #define CONVERT_A_X                 (CONVERT_A)
-#define CONVERT_A_Y                 (-CONVERT_A)
-#define CONVERT_A_Z                 (-CONVERT_A)
+#define CONVERT_A_Y                 (CONVERT_A)
+#define CONVERT_A_Z                 (CONVERT_A)
 
 // conversion of magnetic data to uT units
 #define CONVERT_M                   (3.0f/50.0f)
 #define CONVERT_M_X                 (CONVERT_M)
 #define CONVERT_M_Y                 (CONVERT_M)
-#define CONVERT_M_Z                 (-CONVERT_M)
+#define CONVERT_M_Z                 (CONVERT_M)
 
 /* conversion of orientation data to degree units */
 #define CONVERT_O                   (1.0f/64.0f)
@@ -130,7 +130,7 @@ __BEGIN_DECLS
 // conversion of gyro data to SI units (radian/sec)
 #define RANGE_GYRO                  (500.0f*(float)M_PI/180.0f)
 #define CONVERT_GYRO                ((70.0f / 4000.0f) * ((float)M_PI / 180.0f))
-#define CONVERT_GYRO_X              (-CONVERT_GYRO)
+#define CONVERT_GYRO_X              (CONVERT_GYRO)
 #define CONVERT_GYRO_Y              (CONVERT_GYRO)
 #define CONVERT_GYRO_Z              (CONVERT_GYRO)
 
