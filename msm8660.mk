@@ -90,7 +90,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    fstab.qcom \
     init.qcom.efs.sync.sh \
     init.qcom.rc \
     init.qcom.power.rc \
